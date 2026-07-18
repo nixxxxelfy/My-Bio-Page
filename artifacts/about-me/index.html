@@ -3,136 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ✏️ Change this to your name -->
-    <title>Tyrel Munya — About Me</title>
-
-    <!-- Links to the CSS file that styles this page -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- Google Fonts — feel free to swap the font name below -->
+    <title>Tyrel Munya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-
-  <body>
-
-    <!-- ============================================================
-         HEADER — your name and a short tagline
-         ============================================================ -->
-    <header class="header">
-      <div class="container">
-
-        <!-- ✏️ Replace with your name -->
-        <h1 class="name">Tyrel Munya</h1>
-
-        <!-- ✏️ Replace with a short tagline (one line about you) -->
-        <p class="tagline">High School Student · Tech Enthusiast · Future CS Major</p>
-
-      </div>
-    </header>
-
-
-    <!-- ============================================================
-         MAIN CONTENT
-         ============================================================ -->
-    <main class="container">
-
-
-      <!-- ── ABOUT SECTION ───────────────────────────────────────── -->
-      <section class="card">
-        <h2 class="section-title">About Me</h2>
-
-        <!-- ✏️ Replace this paragraph with your own bio (2–4 sentences) -->
-        <p>
-          Hi! I'm Tyrel, a high school student with a big passion for technology.
-          I enjoy learning how things work — from websites and apps to the hardware
-          and systems running behind the scenes.
-        </p>
-        <p>
-          I'm always looking to grow my skills and explore new ideas, both inside
-          and outside the classroom.
-        </p>
-
-      </section>
-
-
-      <!-- ── INTERESTS SECTION ───────────────────────────────────── -->
-      <section class="card">
-        <h2 class="section-title">My Interests</h2>
-
-        <!-- ✏️ Edit or add list items to match your interests -->
-        <ul class="interest-list">
-          <li>🏐 Volleyball</li>
-          <li>💪 Calisthenics</li>
-          <li>🎮 Gaming</li>
-          <li>🎵 Music</li>
-        </ul>
-
-      </section>
-
-
-      <!-- ── GOALS SECTION ───────────────────────────────────────── -->
-      <section class="card">
-        <h2 class="section-title">My Goals</h2>
-
-        <!-- ✏️ Edit or add list items to match your goals -->
-        <ul class="goal-list">
-          <li>
-            <span class="goal-label">Academic</span>
-            Study computer science at a university in China.
-          </li>
-          <li>
-            <span class="goal-label">Short-term</span>
-            Build a strong foundation in programming and problem-solving before university.
-          </li>
-          <li>
-            <span class="goal-label">Long-term</span>
-            Use technology to create meaningful solutions and make a positive impact.
-          </li>
-          <li>
-            <span class="goal-label">Personal</span>
-            Learn Mandarin to prepare for life and study in China.
-          </li>
-        </ul>
-
-      </section>
-
-
-      <!-- ── CONTACT SECTION ─────────────────────────────────────── -->
-      <section class="card contact-card">
-        <h2 class="section-title">Get In Touch</h2>
-
-        <!-- ✏️ Replace the href and text with your own email / links -->
-        <p>Feel free to reach out — I'd love to connect!</p>
-        <div class="contact-links">
-          <a href="mailto:alex@example.com" class="contact-link">✉️ alex@example.com</a>
-          <a href="https://github.com" class="contact-link" target="_blank">🐙 GitHub</a>
-          <a href="https://linkedin.com" class="contact-link" target="_blank">💼 LinkedIn</a>
-        </div>
-
-      </section>
-
-
-    </main>
-
-
-    <!-- ============================================================
-         FOOTER
-         ============================================================ -->
-    <footer class="footer">
-      <div class="container">
-        <!-- ✏️ Replace with your name -->
-        <p>Made by Tyrel Munya · 2025</p>
-      </div>
-    </footer>
-
-    <!-- This tiny script keeps the Vite dev server running — you can ignore it -->
+  <body class="dark bg-background text-foreground selection:bg-primary/30 selection:text-primary">
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
   </body>
 </html>
