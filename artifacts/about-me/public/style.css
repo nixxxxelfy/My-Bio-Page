@@ -1,0 +1,227 @@
+/* ================================================================
+   ABOUT ME — Stylesheet
+   ================================================================
+   How to use this file:
+   - Each section has a comment explaining what it controls.
+   - Change any value and save — the page updates instantly.
+   - Colors are set as variables at the top so you only need to
+     change them in ONE place.
+   ================================================================ */
+
+
+/* ── COLOUR PALETTE ──────────────────────────────────────────────
+   ✏️ Change these to customise the whole page at once.
+   Try: background: #1a1a2e; text: #eaeaea; for a dark theme.
+   ──────────────────────────────────────────────────────────────── */
+:root {
+  --color-background:   #f5f7fa;   /* page background */
+  --color-surface:      #ffffff;   /* card background */
+  --color-primary:      #4f46e5;   /* headings and accents */
+  --color-text:         #1e1e2e;   /* main text */
+  --color-text-muted:   #6b7280;   /* lighter text (tagline, footer) */
+  --color-border:       #e5e7eb;   /* card border */
+  --color-link:         #4f46e5;   /* link colour */
+  --color-link-hover:   #3730a3;   /* link hover colour */
+  --color-tag-bg:       #ede9fe;   /* goal label background */
+  --color-tag-text:     #4f46e5;   /* goal label text */
+}
+
+
+/* ── RESET & BASE ─────────────────────────────────────────────────
+   This removes browser defaults so every browser looks the same.
+   ──────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+
+/* ── LAYOUT ───────────────────────────────────────────────────────
+   .container centres content and limits how wide it gets.
+   ──────────────────────────────────────────────────────────────── */
+.container {
+  max-width: 720px;       /* ✏️ increase for a wider layout */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+/* ── HEADER ───────────────────────────────────────────────────────
+   The top banner with your name and tagline.
+   ──────────────────────────────────────────────────────────────── */
+.header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 60px 0 48px;
+  text-align: center;
+}
+
+.name {
+  font-size: 2.5rem;      /* ✏️ change size: 2rem = smaller, 3rem = larger */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+
+/* ── CARDS ────────────────────────────────────────────────────────
+   Each section (About, Interests, Goals, Contact) is a card.
+   ──────────────────────────────────────────────────────────────── */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 24px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+
+/* ── PARAGRAPHS ───────────────────────────────────────────────────
+   Space between paragraphs inside the About card.
+   ──────────────────────────────────────────────────────────────── */
+.card p {
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ── INTERESTS LIST ───────────────────────────────────────────────
+   The bulleted list in the "My Interests" card.
+   ──────────────────────────────────────────────────────────────── */
+.interest-list {
+  list-style: none;        /* removes the default bullet */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.interest-list li {
+  font-size: 1rem;
+  padding-left: 4px;
+}
+
+
+/* ── GOALS LIST ───────────────────────────────────────────────────
+   The list in the "My Goals" card with coloured labels.
+   ──────────────────────────────────────────────────────────────── */
+.goal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.goal-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+/* The small coloured pill (e.g. "Short-term") */
+.goal-label {
+  background-color: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* ── CONTACT CARD ─────────────────────────────────────────────────
+   The links in the "Get In Touch" section.
+   ──────────────────────────────────────────────────────────────── */
+.contact-card p {
+  margin-bottom: 16px;
+  color: var(--color-text-muted);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-link);
+  font-weight: 500;
+  padding: 8px 18px;
+  border: 2px solid var(--color-link);
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.contact-link:hover {
+  background-color: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+  color: #ffffff;
+}
+
+
+/* ── FOOTER ───────────────────────────────────────────────────────
+   Small text at the very bottom of the page.
+   ──────────────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 40px 0 32px;
+  margin-top: 24px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+
+/* ── RESPONSIVE (mobile) ──────────────────────────────────────────
+   On small screens, reduce font sizes and padding automatically.
+   ──────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .header {
+    padding: 40px 0 36px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .goal-list li {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
