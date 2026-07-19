@@ -28,4 +28,5 @@ jobs:
           path: ./dist
 
   deploy:
-    nee
+    needs: build
+    runs-on: ubuntu-latest
